@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>语音播报</title>
+</head>
+
+<body>
+<div class="text">这里是一段文字，想让它播报出来</div>
+<script type="text/javascript">
+	function speckText(str){
+        var url = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&text=" + encodeURI(str);
+        var n = new Audio(url);
+       	n.src = url;
+       	n.play();
+    }
+    speckText(document.querySelectorAll(".text")[0].innerHTML);
+
+</script>
+
+</body>
+</html>
